@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './widgets/drawer.dart';
+import './screens/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,7 +47,28 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Colors.black26,
             width: MediaQuery.of(context).size.width,
             height: 300,
-            child: Center(child: Text("CUONG")),
+            child: Center(
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                  // ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  //   content: Text("Sending Message"),
+                  // )
+                  // );
+                },
+                child: const Text(
+                  " Sign Up",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),
