@@ -39,7 +39,25 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: const Center(child: Text("CUONG")),
+      body: Column(
+        children: <Widget>[
+          Container(
+            margin: const EdgeInsets.fromLTRB(5, 20, 5, 10),
+            color: Colors.black26,
+            width: MediaQuery.of(context).size.width,
+            height: 300,
+            child: Center(child: Text("CUONG")),
+          ),
+        ],
+      ),
+      // body: Center(
+      //   child: Container(
+      //     margin: const EdgeInsets.all(10.0),
+      //     color: Colors.amber[600],
+      //     width: MediaQuery.of(context).size.width,
+      //     height: 300,
+      //   ),
+      // ),
       drawer: const DrawerWidget(),
 
       floatingActionButton: FloatingActionButton(
